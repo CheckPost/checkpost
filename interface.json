@@ -1,0 +1,46 @@
+{
+  "types": {
+    "name": {
+      "minLength": 2,
+      "maxLength": 100
+    },
+    "html": {
+      "maxWord": 1000
+    },
+    "datetime": {
+
+    }
+  },
+  "models": {
+    "Post": {
+      "id": "string",
+      "title": {
+        "type": "string",
+        "maxLength": 100
+      },
+      "body": {
+        "type": "html?",
+        "maxWord": 5000
+      },
+      "publishedAt": "datetime",
+      "categories": "Category[]?",
+      "author": "Author"
+    }
+  },
+  "api": {
+    "getAllPosts": {
+      "params": {
+        "id": "Post.id",
+        "category": "Category.name"
+      },
+      "return": "Post[]"
+    },
+    "getAllCategories": {
+      "params": {
+        "id": "string",
+        "name": "Category.name"
+      },
+      "return": "Post"
+    }
+  }
+}

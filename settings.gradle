@@ -1,0 +1,2 @@
+rootProject.name = 'checkpost'
+include(':modules:graphi')

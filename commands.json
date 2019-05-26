@@ -1,0 +1,22 @@
+{
+  "commands": {
+    "getPosts": {
+      "as": "posts",
+      "params": {
+        "...": ["*"],
+        "max": "$max",
+        "offset": "$offset"
+      },
+      "returns": [
+        "title",
+        "body",
+        "@model/author"
+      ]
+    }
+  },
+  "variables": {
+    "title": "",
+    "max": 10,
+    "offset": 0
+  }
+}
